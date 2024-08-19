@@ -11,11 +11,13 @@ const Login = () => {
         e.preventDefault();
          loginUser();
     }
-
+    const navigate=useNavigate();
   
+  const forgotPassFun=()=>{
+navigate("/resetpassword")
+  };
 
 
-   const navigate=useNavigate();
     const handleClick=()=>{
         navigate("/register");
 
@@ -56,7 +58,7 @@ const Login = () => {
                 <input className="form-control" type="password"  name="password" value={password} onChange={(e)=> setPassword(e.target.value)} required/>
             </div>
             <div className="mt-5">
-                <Link to="/resetpassword">forgot Password?</Link>
+                <Link onClick={forgotPassFun}>forgot Password?</Link>
               </div>
             <div className="d-flex justify-content-evenly mt-5">
               
