@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 const ResetPasswordPage1 = () => {
     const [email, setEmail]=useState('');
-    const [message,setMessage]=useState('message');
     const navigate=useNavigate();
     const num=5;
     
