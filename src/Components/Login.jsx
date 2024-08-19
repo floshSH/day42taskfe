@@ -13,9 +13,7 @@ const Login = () => {
     }
     const navigate=useNavigate();
   
-  const forgotPassFun=()=>{
-navigate("/resetpassword")
-  };
+
 
 
     const handleClick=()=>{
@@ -58,7 +56,7 @@ navigate("/resetpassword")
                 <input className="form-control" type="password"  name="password" value={password} onChange={(e)=> setPassword(e.target.value)} required/>
             </div>
             <div className="mt-5">
-                <Link onClick={forgotPassFun}>forgot Password?</Link>
+                <Link to="/resetpassword" >forgot Password?</Link>
               </div>
             <div className="d-flex justify-content-evenly mt-5">
               
