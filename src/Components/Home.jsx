@@ -9,7 +9,7 @@ const Home = () => {
 const [shortUrl,setShortUrl]=useState('');
 const [message, setMessage]=useState('');
   const deployClick=async()=>{
-    const response= await axios.post("http://localhost:5000/url/getLongurl", {shortUrl:url});
+    const response= await axios.post("https://day42taskbe.onrender.com/url/getLongurl", {shortUrl:url});
   if(response.data.message === "deploy") {
      window.location.href=response.data.url;
   }
@@ -20,7 +20,7 @@ const handleSubmit=(e)=>{
    
 }
 const shortClick=async()=>{
-    const response= await axios.post("http://localhost:5000/url/createShorturl", {longurl:url});
+    const response= await axios.post("https://day42taskbe.onrender.com/url/createShorturl", {longurl:url});
     setShortUrl(response.data.shortUrl);
     setMessage(response.data.message);
 
